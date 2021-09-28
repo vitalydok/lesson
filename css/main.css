@@ -189,3 +189,166 @@ body {
 .info-container__desription{
     text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        background: linear-gradient(45deg, #31312f,#161616);
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-name h1 {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        font-size: 90px;
+        line-height: 60px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding-top: 20px;
+    }
+    .main-name span {
+        color: #fff;
+        font-size: 65px;
+    }
+    .main-name {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    .main-about__description {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 600;
+        line-height: 40px;
+        width: 80%;
+        margin-top: 30px;
+    }
+    .main-about__img {
+        position: absolute;
+        background: url(https://sun9-35.userapi.com/impg/8gWdeRSXPPBn-q1yVWKo4fU-TPTUm6oFP59y_A/utWKYnuToAQ.jpg?size=1440x2160&quality=96&sign=5f7694129d6f383ed6958a71eee240fa&type=album);
+        width: 40%;
+        height: 600px;
+        background-size: cover;
+        top: 105%;
+    }
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-container__groupe {
+        width: 30%;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #232323;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        background: #F7F7F7;
+        padding-top: 170px;
+        padding-bottom: 170px;
+        height: fit-content;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .main {
+        background: linear-gradient(
+    45deg, #31312f,#161616);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-name {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-name h1 {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        font-size: 55px;
+        line-height: 43px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding-top: 20px;
+    }
+    .main-name span {
+        color: #fff;
+        font-size: 46px;
+    }
+    .main-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    .main-about__description {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        line-height: 40px;
+        width: 80%;
+        margin-top: 30px;
+        text-align: justify;
+    }
+    .main-about__img {
+        position: absolute;
+        background: url(https://sun9-35.userapi.com/impg/8gWdeRSXPPBn-q1yVWKo4fU-TPTUm6oFP59y_A/utWKYnuToAQ.jpg?size=1440x2160&quality=96&sign=5f7694129d6f383ed6958a71eee240fa&type=album);
+        width: 90%;
+        height: 285px;
+        background-size: cover;
+        top: 98%;
+        z-index: 4;
+    }
+    .info {
+        background: #F7F7F7;
+        padding-top: 290px;
+        padding-bottom: 170px;
+        height: fit-content;
+    }
+    .info-container__groupe {
+        width: 78%;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid #232323;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .info-container__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #232323;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+  }
