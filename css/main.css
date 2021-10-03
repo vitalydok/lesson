@@ -38,16 +38,25 @@ body {
 .main-name h1{
     writing-mode: tb-rl;
     transform: rotate(180deg);
-    font-size: 135px;
-    line-height: 90px;
+    font-size: 102px;
+    line-height: 70px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #bfbfbf7a, 7px 7px 0px rgb(0 0 0 / 20%)
 }
 
 .main-name span{
     color: #fff;
-    font-size: 100px;
+    font-size: 80px;
+}
+
+.main-name p{
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 39px;
+    color: #fff;
 }
 
 .main-about {
@@ -58,23 +67,23 @@ body {
 }
 
 .main-about__description {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 21px;
     width: 80%;
     margin-top: 85px;
 }
 
 .main-about__text{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .main-about__img {
     position: absolute;
     background: url(https://sun9-35.userapi.com/impg/8gWdeRSXPPBn-q1yVWKo4fU-TPTUm6oFP59y_A/utWKYnuToAQ.jpg?size=1440x2160&quality=96&sign=5f7694129d6f383ed6958a71eee240fa&type=album);
     width: 60%;
-    height: 750px;
+    height: 545px;
     background-size: cover;
     top: 40%;
 }
@@ -97,45 +106,19 @@ body {
     width: 30%;
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #232323;  
+    padding: 15px 30px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
-.info-container__groupe::before{
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 12px);
-    background: #f7f7f7;
-    transition: 0.5s ease-in-out;
-    transform: scaleY(1);
-    transition-delay: 0.5s;
-}
-
-.info-container__groupe:hover::before{
-    transform: scaleY(0);
-}
-
-.info-container__groupe::after{
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% - 12px);
-    background: #f7f7f7;
-    transition: 0.5s ease-in-out;
-    transform: scaleX(1);
-}
-
-.info-container__groupe:hover::after{
-    transform: scaleX(0);
-}
 
 .info-container__item {
     width: 100%;
@@ -143,20 +126,26 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    position: relative;
-    z-index: 3;
+    transition: 0.5s;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.info-container__groupe:hover .info-container__item{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .info-container__title {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 19px;
     color: #232323;
     margin-bottom: 30px;
     text-align: center;
 }
 
 .info-container__desription p{
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -164,14 +153,16 @@ body {
 .info-container__link{
     color: #232323;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .info-container__social{
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .info-container__social a{
@@ -226,23 +217,24 @@ body {
     .main-about {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         position: relative;
         align-items: center;
     }
     .main-about__description {
-        font-size: 24px;
-        color: #fff;
-        font-weight: 600;
-        line-height: 40px;
-        width: 80%;
-        margin-top: 30px;
+        font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 20px;
+    width: 50%;
+    margin-top: 30px;
     }
     .main-about__img {
-        position: absolute;
+        position: initial;
         background: url(https://sun9-35.userapi.com/impg/8gWdeRSXPPBn-q1yVWKo4fU-TPTUm6oFP59y_A/utWKYnuToAQ.jpg?size=1440x2160&quality=96&sign=5f7694129d6f383ed6958a71eee240fa&type=album);
         width: 40%;
-        height: 600px;
+        height: 380px;
         background-size: cover;
         top: 105%;
     }
@@ -254,7 +246,7 @@ body {
         align-items: center;
     }
     .info-container__groupe {
-        width: 30%;
+        width: 70%;
         position: relative;
         display: inline-block;
         padding: 15px 30px;
@@ -267,8 +259,53 @@ body {
 
     .info {
         background: #F7F7F7;
-        padding-top: 170px;
-        padding-bottom: 170px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: fit-content;
+    }
+  }
+
+  @media screen and (max-width: 910px) {
+    .main {
+        height: auto;
+    }
+    .main-about__img {
+        position: initial;
+        
+        width: 40%;
+        height: 340px;
+        background-size: cover;
+        top: 105%;
+    }
+    .info {
+        background: #F7F7F7;
+        padding-top: 90px;
+        padding-bottom: 50px;
+        height: fit-content;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .info {
+        background: #F7F7F7;
+        padding-top: 130px;
+        padding-bottom: 50px;
+        height: fit-content;
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    .main-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        align-items: center;
+    }
+    .info {
+        background: #F7F7F7;
+        padding-top: 150px;
+        padding-bottom: 50px;
         height: fit-content;
     }
   }
@@ -302,24 +339,9 @@ body {
         color: #fff;
         font-size: 46px;
     }
-    .main-about {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-    }
-    .main-about__description {
-        font-size: 18px;
-        color: #fff;
-        font-weight: 600;
-        line-height: 40px;
-        width: 80%;
-        margin-top: 30px;
-        text-align: justify;
-    }
+    
     .main-about__img {
-        position: absolute;
+        position: initial;
         background: url(https://sun9-35.userapi.com/impg/8gWdeRSXPPBn-q1yVWKo4fU-TPTUm6oFP59y_A/utWKYnuToAQ.jpg?size=1440x2160&quality=96&sign=5f7694129d6f383ed6958a71eee240fa&type=album);
         width: 90%;
         height: 285px;
@@ -329,7 +351,7 @@ body {
     }
     .info {
         background: #F7F7F7;
-        padding-top: 290px;
+        padding-top: 30px;
         padding-bottom: 170px;
         height: fit-content;
     }
@@ -352,3 +374,4 @@ body {
         text-align: center;
     }
   }
+
