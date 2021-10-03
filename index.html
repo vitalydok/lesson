@@ -105,11 +105,13 @@
         </div>
     </div>
 
-    <script src="/js/vanilla-tilt.js"></script>
+    <script src="js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".info-container__groupe"), {
+        VanillaTilt.init(document.querySelectorAll(".info-container__groupe"), {
             max: 25,
-            speed: 400
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
         });
     </script>
 </body>
